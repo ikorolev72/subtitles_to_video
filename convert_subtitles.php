@@ -36,7 +36,7 @@ $effect->setGeneralSettings(
   array(
       'ffmpeg' => '/usr/bin/ffmpeg',
       'ffprobe' => '/usr/bin/ffprobe',
-      'ffmpegLogLevel' => 'warning',
+      'ffmpegLogLevel' => 'info',
       'showCommand' => false,
   )
 );

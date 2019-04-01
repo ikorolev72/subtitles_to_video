@@ -606,13 +606,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
     public function getWidthOfTextInPixel($fontSize, $font, $text)
     {
-        $tmp_bbox = getSizeOfTextInPixel($fontSize, $font, $text);
+        $tmp_bbox = $this->getSizeOfTextInPixel($fontSize, $font, $text);
         return ($tmp_bbox['width']);
     }
 
     public function getHeightOfTextInPixel($fontSize, $font, $text)
     {
-        $tmp_bbox = getSizeOfTextInPixel($fontSize, $font, $text);
+        $tmp_bbox = $this->getSizeOfTextInPixel($fontSize, $font, $text);
         return ($tmp_bbox['height']);
     }
 
@@ -641,7 +641,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 $maxLen = strlen($line);
             }
         }
-        $textWidth = getWidthOfTextInPixel($fontSize, $font, $text);
+        $textWidth = $this->getWidthOfTextInPixel($fontSize, $font, $text);
         if (0 === $textWidth) {
             $textWidth = 1;
         }
